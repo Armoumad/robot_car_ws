@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_custom_robot_mobile_base">
+
+  <!-- Inclusion des macros d'inertie -->
+  <xacro:include filename="$(find my_custom_robot)/urdf/inertial_macros.xacro"/>
+
+  <!-- Paramètres châssis -->
+  <xacro:property name="chassis_length"      value="0.254"/>
+  <xacro:property name="chassis_width"       value="0.203"/>
+  <xacro:property name="chassis_height"      value="0.0602"/>
+  <xacro:property name="chassis_mass"        value="1.0"/>
+
+  <!-- Paramètres roues -->
+  <xacro:property name="wheel_radius"        value="0.033"/>
+  <xacro:property name="wheel_thickness"     value="0.026"/>
+  <xacro:property name="wheel_mass"          value="0.05"/>
+
+  <xacro:property name="wheel_offset_x"      value="0.12"/>
+  <xacro:property name="wheel_offset_y"      value="0.125"/>
+  <xacro:property name="wheel_offset_z"      value="0.03"/>
+
+  <xacro:property name="pi" value="3.14159265359"/>
+
+  <!-- Matériaux -->
+  <material name="orange"><color rgba="1.0 0.5 0.0 1.0"/></material>
+  <material name="blue"><color rgba="0.0 0.0 1.0 1.0"/></material>
+  <material name="grey"><color rgba="0.5 0.5 0.5 1.0"/></material>
+
+  <!-- Lien de base -->
+  <link name="base_link"/>
+
+  <!-- Châssis -->
+  <joint name="chassis_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="chassis"/>
+    <origin xyz="${-wheel_offset_x} 0 ${-wheel_offset_z}"/>
+  </joint>
+
+  <link name="chassis">
+    <xacro:inertial_box mass="${chassis_mass}" sx="${chassis_length}" sy="${chassis_width}" sz="${chassis_height}">
+      <origin xyz="${chassis_length/2} 0 ${chassis_height/2}" rpy="0 0 0"/>
+    </xacro:inertial_box>
+    <visual>
+      <origin xyz="${chassis_length/2} 0 ${chassis_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find my_custom_robot)/meshes/body.dae"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <origin xyz="${chassis_length/2} 0 ${chassis_height/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Roue avant gauche -->
+  <joint name="left_up_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_up_wheel"/>
+    <origin xyz="${wheel_offset_x} ${wheel_offset_y} 0" rpy="-${pi/2} 0 0" />
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+  <link name="left_up_wheel">
+    <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_cylinder>
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find my_custom_robot)/meshes/wheel4.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Roue avant droite -->
+  <joint name="right_up_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_up_wheel"/>
+    <origin xyz="${wheel_offset_x} ${-wheel_offset_y+0.013} 0" rpy="${pi/2} 0 0" />
+    <axis xyz="0 0 -1"/>
+    <dynamics damping="0.1" friction="0.0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+  <link name="right_up_wheel">
+    <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_cylinder>
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find my_custom_robot)/meshes/wheel1.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Roue arrière gauche -->
+  <joint name="left_down_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="left_down_wheel"/>
+    <origin xyz="${-wheel_offset_x+0.05} ${wheel_offset_y} 0" rpy="-${pi/2} 0 0" />
+    <axis xyz="0 0 1"/>
+    <dynamics damping="0.1" friction="0.0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+  <link name="left_down_wheel">
+    <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_cylinder>
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find my_custom_robot)/meshes/wheel2.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Roue arrière droite -->
+  <joint name="right_down_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="right_down_wheel"/>
+    <origin xyz="${-wheel_offset_x+0.05} ${-wheel_offset_y+0.013} 0" rpy="${pi/2} 0 0" />
+    <axis xyz="0 0 -1"/>
+    <dynamics damping="0.1" friction="0.0"/>
+    <limit effort="10.0" velocity="100.0"/>
+  </joint>
+  <link name="right_down_wheel">
+    <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_cylinder>
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find my_custom_robot)/meshes/wheel3.dae"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ros2_control uniquement pour les roues -->
+  <ros2_control name="RobotSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="left_up_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="right_up_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="left_down_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="right_down_wheel_joint">
+      <command_interface name="velocity"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <!-- Plugin Gazebo ros2_control -->
+  <gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <parameters>$(find my_custom_robot)/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <!-- Friction des roues -->
+  <gazebo reference="left_up_wheel"><mu1>1.2</mu1><mu2>1.2</mu2></gazebo>
+  <gazebo reference="right_up_wheel"><mu1>1.2</mu1><mu2>1.2</mu2></gazebo>
+  <gazebo reference="left_down_wheel"><mu1>1.2</mu1><mu2>1.2</mu2></gazebo>
+  <gazebo reference="right_down_wheel"><mu1>1.2</mu1><mu2>1.2</mu2></gazebo>
+
+  <!-- Matériaux Gazebo -->
+  <gazebo reference="chassis"><material>Gazebo/Orange</material></gazebo>
+</robot>

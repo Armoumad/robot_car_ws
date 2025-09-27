@@ -1,0 +1,50 @@
+[0.023s] Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/armoumad/robot_cae_ws/src/my_custom_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/armoumad/robot_cae_ws/install/my_custom_robot
+[0.440s] -- The C compiler identification is GNU 11.4.0
+[1.130s] -- The CXX compiler identification is GNU 11.4.0
+[1.645s] -- Detecting C compiler ABI info
+[1.829s] -- Detecting C compiler ABI info - done
+[1.835s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.836s] -- Detecting C compile features
+[1.837s] -- Detecting C compile features - done
+[1.840s] -- Detecting CXX compiler ABI info
+[2.040s] -- Detecting CXX compiler ABI info - done
+[2.045s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.046s] -- Detecting CXX compile features
+[2.046s] -- Detecting CXX compile features - done
+[2.070s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.205s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.272s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.320s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.411s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.415s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.416s] -- Added test 'lint_cmake' to check CMake code style
+[2.418s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.420s] -- Added test 'xmllint' to check XML markup files
+[2.424s] -- Configuring done
+[2.427s] -- Generating done
+[2.430s] -- Build files have been written to: /home/armoumad/robot_cae_ws/build/my_custom_robot
+[2.434s] Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/armoumad/robot_cae_ws/src/my_custom_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/armoumad/robot_cae_ws/install/my_custom_robot
+[2.436s] Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/armoumad/robot_cae_ws/build/my_custom_robot -- -j8 -l8
+[2.471s] Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/armoumad/robot_cae_ws/build/my_custom_robot -- -j8 -l8
+[2.480s] Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/armoumad/robot_cae_ws/build/my_custom_robot
+[2.486s] -- Install configuration: ""
+[2.486s] -- Execute custom install script
+[2.487s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/config/controllers.yaml
+[2.496s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/launch/gazebo.launch.py
+[2.504s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/urdf/my_robot.urdf.xacro
+[2.514s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/ament_index/resource_index/package_run_dependencies/my_custom_robot
+[2.522s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/ament_index/resource_index/parent_prefix_path/my_custom_robot
+[2.530s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/ament_prefix_path.sh
+[2.538s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/ament_prefix_path.dsv
+[2.547s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/path.sh
+[2.555s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/path.dsv
+[2.563s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.bash
+[2.570s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.sh
+[2.580s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.zsh
+[2.588s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.dsv
+[2.597s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/package.dsv
+[2.605s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/ament_index/resource_index/packages/my_custom_robot
+[2.615s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/cmake/my_custom_robotConfig.cmake
+[2.624s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/cmake/my_custom_robotConfig-version.cmake
+[2.632s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/package.xml
+[2.641s] Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/armoumad/robot_cae_ws/build/my_custom_robot

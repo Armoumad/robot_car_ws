@@ -1,0 +1,1 @@
+/home/armoumad/robot_cae_ws/build/my_custom_robot/ament_cmake_environment_hooks/local_setup.bash

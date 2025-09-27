@@ -1,0 +1,25 @@
+[0.022s] Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/armoumad/robot_cae_ws/build/my_custom_robot -- -j8 -l8
+[0.138s] Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/armoumad/robot_cae_ws/build/my_custom_robot -- -j8 -l8
+[0.152s] Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/armoumad/robot_cae_ws/build/my_custom_robot
+[0.159s] -- Install configuration: ""
+[0.161s] -- Execute custom install script
+[0.162s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/config/controllers.yaml
+[0.163s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/launch/gazebo.launch.py
+[0.163s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/urdf/inertial_macros.xacro
+[0.171s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/urdf/my_robot.urdf.xacro
+[0.172s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/ament_index/resource_index/package_run_dependencies/my_custom_robot
+[0.173s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/ament_index/resource_index/parent_prefix_path/my_custom_robot
+[0.173s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/ament_prefix_path.sh
+[0.173s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/ament_prefix_path.dsv
+[0.173s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/path.sh
+[0.174s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/environment/path.dsv
+[0.174s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.bash
+[0.174s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.sh
+[0.174s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.zsh
+[0.174s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/local_setup.dsv
+[0.174s] -- Symlinking: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/package.dsv
+[0.187s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/ament_index/resource_index/packages/my_custom_robot
+[0.188s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/cmake/my_custom_robotConfig.cmake
+[0.188s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/cmake/my_custom_robotConfig-version.cmake
+[0.188s] -- Up-to-date symlink: /home/armoumad/robot_cae_ws/install/my_custom_robot/share/my_custom_robot/package.xml
+[0.190s] Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/armoumad/robot_cae_ws/build/my_custom_robot

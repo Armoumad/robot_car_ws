@@ -1,0 +1,6 @@
+Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/armoumad/robot_cae_ws/src/my_custom_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/armoumad/robot_cae_ws/install/my_custom_robot
+Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/armoumad/robot_cae_ws/src/my_custom_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/armoumad/robot_cae_ws/install/my_custom_robot
+Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/armoumad/robot_cae_ws/build/my_custom_robot -- -j8 -l8
+Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/armoumad/robot_cae_ws/build/my_custom_robot -- -j8 -l8
+Invoking command in '/home/armoumad/robot_cae_ws/build/my_custom_robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/armoumad/robot_cae_ws/build/my_custom_robot
+Invoked command in '/home/armoumad/robot_cae_ws/build/my_custom_robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/armoumad/robot_cae_ws/build/my_custom_robot
