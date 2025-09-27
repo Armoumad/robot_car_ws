@@ -6,22 +6,36 @@ controller_manager:
     diff_drive_controller:
       type: diff_drive_controller/DiffDriveController
 
+# Paramètres du diff drive
 diff_drive_controller:
   ros__parameters:
+    # Anciennes clés (certaines versions utilisent *_wheel_names)
+    left_wheel_names:
+      - left_up_wheel_joint
+      - left_down_wheel_joint
+    right_wheel_names:
+      - right_up_wheel_joint
+      - right_down_wheel_joint
+
+    # Nouvelles clés (si ta version les supporte)
     left_wheels:
       - left_up_wheel_joint
       - left_down_wheel_joint
     right_wheels:
       - right_up_wheel_joint
       - right_down_wheel_joint
+
     wheel_separation: 0.25
     wheel_radius: 0.033
+
     use_stamped_vel: true
     publish_rate: 50.0
     cmd_vel_timeout: 0.5
+
     base_frame_id: base_link
     odom_frame_id: odom
     enable_odom_tf: true
+
     linear:
       x:
         has_velocity_limits: true
